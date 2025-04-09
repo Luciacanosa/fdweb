@@ -1,227 +1,173 @@
+/* Estilos generales */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f98e78;
+  font-family: "Poppins-extrabold-italic", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  background: var(--background);
+  color: var(--foreground);
 }
 
 h1,
 h2,
+#inicio h2 {
+  font-weight: bold;
+  color: #c2ea2c;
+}
 h3 {
-  color: #333;
+  font-family: "Poppins-Bold", sans-serif;
+  color: #ff6600;
 }
 
-.contenedor {
-  display: flex;
-
-  background-color: #bbdefb;
-  height: 100%;
-  padding: 15px;
-  gap: 5px;
-}
-
-.flex-contenedor > div {
-  background: #ffecb3;
-  border: 3px solid #ffcc80;
-  border-radius: 5px;
-  padding: 8px;
-}
-
-button:hover {
-  background-color: #ff9800;
+/* Estilos del encabezado */
+header {
+  background-color: #ff6600;
   color: white;
-}
-
-input:focus {
-  border: 2px solid #4caf50;
-}
-
-li:nth-child(odd) {
-  background-color: #f0f0f0;
-}
-
-p:not(.especial) {
-  color: gray;
-}
-
-input[type="checkbox"]:checked + label {
-  color: green;
-}
-
-.contenedor {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.item {
-  flex: 1;
-  padding: 10px;
-  background-color: lightblue;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-}
-.grid-item {
-  background-color: lightcoral;
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 
-/* Tema claro por defecto */
-.page-content {
-  --color-fondo: #fff;
-  --color-texto: #000;
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 20px 0;
 }
-/* Tema oscuro cuando el checkbox esté activado */
-#theme-toggle:checked ~ .page-content {
-  --color-fondo: #121212;
-  --color-texto: #eaeaea;
+
+#inicio h2 {
+  font-weight: bold;
 }
-/* Utilizar las variables en los elementos */
-body {
-  background: var(--color-fondo);
-  color: var(--color-texto);
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+/* Estilos de la sección principal */
+main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.emphasis {
+  color: #0073e6;
+  font-weight: bold;
+}
+
+/* Estilos específicos para "sobre nosotros" */
+#inicio h2 {
+  font-weight: bold;
+}
+
+/* Estilos específicos para "sobre nuestros productos" */
+#productos h2 {
+  color: #0073e6;
+  font-weight: bold;
+}
+
+/* Estilos de imagen y video */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+video {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+/* Contenedores flexibles */
+.contenedor {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.item {
+  background: #0073e6;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-item {
+  background: #ff6600;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* Estilos del footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #222;
+  color: white;
+}
+
+/* Botón de tema */
+.theme-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
+/* Menú de navegación responsive */
+.nav-menu {
+  display: none;
+  background: #0073e6;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+.nav-menu-btn:checked + .nav-menu {
+  display: block;
 }
 
 .nav-menu-btn {
   display: none; /* ocultar el checkbox */
 }
 
+.nav-menu-btn {
+  display: none; /* ocultar el checkbox */
+}
+.nav-menu {
+  /* estilos del botón toggle: puede ser un icono, posición, cursor pointer, etc. */
+}
 /* Ejemplo: icono cambia al estado activo */
 .nav-menu-btn:checked + .nav-menu .nav-menu-icon {
   background-image: url("icono-modo-oscuro.svg");
-}
-
-/* Cuando el checkbox está marcado, aplicar tema oscuro */
-.nav-menu-btn:checked ~ .page-content {
-  --color-fondo: #121212;
-  --color-texto: #eaeaea;
-}
-
-/* ruvebal.art themes by @ruvebal © 2024 * /
-/* Default Mode */
-/* My Tyrian Purple Mode */
-:root {
-  --toggle-shape: "\25D0"; /* Unicode for filled triangle */
-
-  --black: hsla(318, 15%, 10%, 0.97);
-  --white: hsla(291, 20%, 95%, 0.97);
-
-  --background: hsla(307, 45%, 50%, 0.75); /* #B946AB */
-  --foreground: hsla(50, 100%, 54%, 0.9); /* #FFDC19 */
-
-  --card: hsla(303, 50%, 43%, 0.9); /* #A6369F */
-  --card-foreground: hsla(22, 90%, 36%, 0.75); /* #B34A09 */
-
-  --popover: hsla(303, 47%, 39%, 0.8); /* #963590 */
-  --popover-foreground: hsla(50, 90%, 36%, 1); /* #B39909 */
-
-  --primary: hsla(318, 58%, 38%, 1); /* #9B2978 */
-  --primary-foreground: hsla(213, 100%, 35%, 0.8); /* #0050B3 */
-
-  --secondary: hsla(291, 46%, 42%, 0.69); /* #923AA0 */
-  --secondary-foreground: hsla(22, 100%, 54%, 0.69); /* #FF7119 */
-
-  --muted: hsla(307, 45%, 50%, 0.75); /* #B946AB */
-  --muted-foreground: hsla(318, 58%, 38%, 1); /* #9B2978 */
-
-  --accent: hsla(291, 46%, 42%, 0.69); /* #923AA0 */
-  --accent-foreground: hsla(50, 100%, 54%, 0.9); /* #FFDC19 */
-
-  --destructive: hsla(318, 58%, 38%, 1); /* #9B2978 */
-  --destructive-foreground: hsla(213, 100%, 35%, 0.8); /* #0050B3 */
-
-  --border: hsla(318, 58%, 38%, 1); /* #9B2978 */
-  --input: hsla(318, 58%, 38%, 1); /* #9B2978 */
-  --ring: hsla(307, 45%, 50%, 0.75); /* #B946AB */
-}
-/* My Tyrian Indigo Mode */
-/*  Reminder: ~ (general sibling combinator)  */
-
-#theme-toggle:checked ~ * {
-  /* Background Colors - INDIGO Tyrian Shellfish */
-  /* Foreground Colors - COMPUND-PURPLE Tyrian Shellfish */
-  --toggle-shape: "\25D1"; /* Outlined Square for Dark Mode */
-
-  --black: hsla(213, 15%, 10%, 0.97);
-  --white: hsla(201, 20%, 95%, 0.97);
-
-  --background: hsla(213, 100%, 18%, 0.9999); /* #00295E */
-  --foreground: hsla(60, 60%, 49%, 0.9999); /* #C9C932 */
-
-  --card: hsla(215, 100%, 26%, 0.9); /* #003889 */
-  --card-foreground: hsla(81, 26%, 51%, 0.9); /* #8CA362 */
-
-  --popover: hsla(212, 100%, 35%, 0.8); /* #0051B3 */
-  --popover-foreground: hsla(1, 91%, 86%, 0.75); /* #FCBFBD */
-
-  --primary: hsla(204, 100%, 38%, 0.75); /* #0073C5 */
-  --primary-foreground: hsla(303, 47%, 39%, 0.8); /* #963590 */
-
-  --secondary: hsla(201, 59%, 66%, 0.69); /* #78B9DD */
-  --secondary-foreground: hsla(1, 60%, 49%, 0.69); /* #C93532 */
-
-  --muted: hsla(201, 59%, 66%, 0.69); /* #78B9DD */
-  --muted-foreground: hsla(213, 100%, 18%, 0.9999); /* #00295E */
-
-  --accent: hsla(303, 47%, 39%, 0.8); /* #963590 */
-  --accent-foreground: hsla(81, 26%, 51%, 0.9); /* #8CA362 */
-
-  --destructive: hsla(213, 100%, 18%, 0.9999); /* #00295E */
-  --destructive-foreground: hsla(357, 58%, 50%, 1); /* #C93532 */
-
-  --border: hsla(357, 58%, 50%, 1); /* #C93532 */
-  --input: hsla(204, 100%, 38%, 0.75); /* #0073C5 */
-  --ring: hsla(204, 100%, 38%, 0.75); /* #0073C5 */
-}
-/* Dark Mode */
-.dark,
-:root[class~="dark"] {
-  /* Custom color palette */
-  --background: hsla(209, 12%, 22%, 1); /* #323B42 */
-  --foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
-
-  --card: hsla(24, 29%, 80%, 0.7); /* #D9C7BE */
-  --card-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
-
-  --popover: hsla(24, 29%, 80%, 1); /* #D9C7BE */
-  --popover-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
-
-  --primary: hsla(16, 5%, 39%, 1); /* #635B58 */
-  --primary-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
-
-  --secondary: hsla(28, 13%, 61%, 1); /* #A59B95 */
-  --secondary-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
-
-  --muted: hsla(24, 6%, 48%, 1); /* #8C817B */
-  --muted-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
-
-  --accent: hsla(28, 12%, 68%, 1); /* #B5A79F */
-  --accent-foreground: hsla(16, 5%, 39%, 1); /* #635B58 */
-
-  --destructive: hsla(10, 12%, 21%, 1); /* #3B3634 */
-  --destructive-foreground: hsla(50, 25%, 98%, 1); /* #FCFBF9 */
-
-  --border: hsla(28, 13%, 61%, 1); /* #A59B95 */
-  --input: hsla(28, 12%, 68%, 1); /* #B5A79F */
-  --ring: hsla(209, 12%, 22%, 1); /* #323B42 */
-}
-
-/* Toggle Button Styling */
-.theme-toggle-button {
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-  color: var(--foreground);
-  background-color: var(--background);
-  border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s;
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.theme-toggle-button:before {
-  content: var(--toggle-shape);
 }

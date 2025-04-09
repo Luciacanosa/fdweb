@@ -1,14 +1,3 @@
-@import "reset.css";
-@import "theme.css";
-@import "root.css";
-@import "types.css";
-@import "base.css";
-@import "grids.css";
-@import "nav.css";
-@import "parallax.css";
-@import "typewriter.css";
-@import "media-queries.css";
-
 /* ruvebal.art themes by @ruvebal © 2024 * /
 /* Default Mode */
 /* My Tyrian Purple Mode */
@@ -132,4 +121,10 @@
 
 .theme-toggle-button:before {
   content: var(--toggle-shape);
+}
+
+/* Cuando el checkbox está marcado, aplicar tema oscuro */
+#theme-toggle:checked ~ * {
+  --color-fondo: #121212;
+  --color-texto: #eaeaea;
 }

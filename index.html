@@ -50,6 +50,8 @@
     />
   </head>
 
+  <input type="checkbox" id="theme-toggle" hidden />
+
   <body>
     <body>
       <header>
@@ -67,7 +69,7 @@
           <h2>Sobre Nosotros</h2>
           <p>Bienvenido a Paginuca.</p>
           <img
-            src="./assets/imagess/IMG_0145-2 copia.jpg"
+            src="./sow/images/IMG_0145-2 copia.jpg"
             alt="Descripción de la imagen"
             width="1000"
           />
@@ -79,11 +81,7 @@
             [
           </video>
         </section>
-        ]
-        <section id="inicio">
-          <h2 class="emphasis">Sobre Nosotros</h2>
-          <p>Bienvenido a nuestra pagina</p>
-        </section>
+
         <section id="productos">
           <h2 class="emphasis"></h2>
           <h2>sobre nuestros productos</h2>
@@ -99,7 +97,35 @@
           <div class="grid-item">2</div>
           <div class="grid-item">3</div>
         </div>
-        <input type="checkbox" id="theme-toggle" class="theme-toggle" />
+        <input class="nav-menu-btn" type="checkbox" id="nav-menu-btn" />
+        <label class="nav-menu" for="nav-menu-btn">
+          <span class="nav-menu-icon"></span>
+        </label>
+        <label for="theme-toggle" class="theme-toggle-button"
+          >Toggle Theme</label
+        >
+
+        <div class="page-content">...contenido del sitio...</div>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto">
+          <h2>Contacto</h2>
+          <p>
+            Escríbenos a
+            <a href="mailto:4350lucia@gmail.com">4350lucia@gmail.com</a>
+            o llámanos al <a href="tel:+123456789">+123456789</a>.
+          </p>
+          <form action="#" method="post">
+            <input type="text" placeholder="Tu nombre" required />
+            <input type="email" placeholder="Tu correo" required />
+            <textarea
+              placeholder="Escribe tu mensaje aquí..."
+              required
+            ></textarea>
+            <button type="submit">Enviar</button>
+          </form>
+        </section>
+
         <input class="nav-menu-btn" type="checkbox" id="nav-menu-btn" />
         <label class="nav-menu" for="nav-menu-btn">
           <span class="nav-menu-icon"></span>
