@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cámara Digital</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h2 {
+        color: #ff6b00;
+      }
+
+      .contenido {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .flecha-retroceso {
+        display: inline-block;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: #ff6b00;
+      }
+
+      .titulo-seccion {
+        margin-bottom: 0;
+      }
+
+      .subtitulo {
+        font-size: 1rem;
+        color: #888;
+        margin-top: 0.3rem;
+      }
+
+      .descripcion {
+        margin: 1.5rem 0;
+        line-height: 1.6;
+      }
+
+      .carrusel-container {
+        position: relative;
+        width: 40%;
+        max-width: 800px;
+        margin: 2rem auto;
+        overflow: hidden;
+      }
+
+      .carrusel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carrusel-slide img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+
+      .carrusel-boton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      .carrusel-boton.izquierda {
+        left: 0;
+      }
+      .carrusel-boton.derecha {
+        right: 0;
+      }
+
+      .galeria-descriptiva {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .foto-descriptiva {
+        text-align: center;
+      }
+
+      .foto-descriptiva img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .foto-descriptiva p {
+        margin-top: 0.5rem;
+        font-size: 0.95rem;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="contenido">
+      <a href="fotografia.html" class="flecha-retroceso">← </a>
+
+      <h1 class="titulo-seccion">Cámara Digital</h1>
+      <p class="subtitulo">2024 - 2025 · España</p>
+
+      <p class="descripcion">
+        No a todos los conciertos a los que voy me he podido llevar mi cámara
+        profesional, pero mi cámara digital si que me acompaña a todos lados y
+        la utilizo siempre que puedo. Aquí os dejo un recap de las fotos que más
+        me han gustado de los últimos meses.
+      </p>
+
+      <!-- Carrusel Malmö 040 -->
+      <h2>Malmö 040</h2>
+      <p class="subtitulo">10/11/12. abril. 2025. Sala La Riviera. Madrid</p>
+      <div class="carrusel-container">
+        <button
+          class="carrusel-boton izquierda"
+          onclick="moverCarrusel('malmo', -1)"
+        >
+          ←
+        </button>
+        <div class="carrusel-slide" id="carrusel-malmo">
+          <img src="assets/malmo/IMG_4048.jpg" alt="Malmö - Foto 1" />
+          <img src="assets/malmo/IMG_4033.jpg" alt="Malmö - Foto 2" />
+          <img src="assets/malmo/IMG_3611.jpg" alt="Malmö - Foto 3" />
+          <img src="assets/malmo/IMG_4139.jpg" alt="Malmö - Foto 4" />
+          <img src="assets/malmo/IMG_4185.jpg" alt="Malmö - Foto 5" />
+          <img src="assets/malmo/IMG_4331.jpg" alt="Malmö - Foto 6" />
+          <img src="assets/malmo/IMG_4238.jpg" alt="Malmö - Foto 7" />
+          <img src="assets/malmo/IMG_4220.jpg" alt="Malmö - Foto 8" />
+          <img src="assets/malmo/IMG_4198.jpg" alt="Malmö - Foto 9" />
+          <img src="assets/malmo/IMG_4249.jpg" alt="Malmö - Foto 10" />
+          <img src="assets/malmo/IMG_4294.jpg" alt="Malmö - Foto 11" />
+          <img src="assets/malmo/IMG_4192.jpg" alt="Malmö - Foto 12" />
+        </div>
+        <button
+          class="carrusel-boton derecha"
+          onclick="moverCarrusel('malmo', 1)"
+        >
+          →
+        </button>
+      </div>
+
+      <!-- Carrusel Festival La Villa -->
+      <h2>Festival La Villa</h2>
+      <p class="subtitulo">3. mayo. 2025. Pastrana, Guadalajara.</p>
+      <div class="carrusel-container">
+        <button
+          class="carrusel-boton izquierda"
+          onclick="moverCarrusel('villa', -1)"
+        >
+          ←
+        </button>
+        <div class="carrusel-slide" id="carrusel-villa">
+          <img
+            src="assets/villa/IMG_4454.jpg"
+            alt="Festival La Villa - Foto 1"
+          />
+          <img
+            src="assets/villa/IMG_4472.jpg"
+            alt="Festival La Villa - Foto 2"
+          />
+          <img
+            src="assets/villa/IMG_4490.jpg"
+            alt="Festival La Villa - Foto 3"
+          />
+          <img
+            src="assets/villa/IMG_4494.jpg"
+            alt="Festival La Villa - Foto 4"
+          />
+          <img
+            src="assets/villa/IMG_4504.jpg"
+            alt="Festival La Villa - Foto 5"
+          />
+          <img
+            src="assets/villa/IMG_4512.jpg"
+            alt="Festival La Villa - Foto 6"
+          />
+          <img
+            src="assets/villa/IMG_4525.jpg"
+            alt="Festival La Villa - Foto 7"
+          />
+        </div>
+        <button
+          class="carrusel-boton derecha"
+          onclick="moverCarrusel('villa', 1)"
+        >
+          →
+        </button>
+      </div>
+
+      <!-- Galería con subtítulos -->
+      <h2>Digitales un poco más rándom</h2>
+      <div class="galeria-descriptiva">
+        <div class="foto-descriptiva">
+          <img src="assets/digitals/IMG_2647.jpg" alt="Detalle 1" />
+          <p>
+            Javi Chapela. Telonero de Marlena. La Riviera. 20. febrero. 2025.
+            Madrid
+          </p>
+        </div>
+        <div class="foto-descriptiva">
+          <img src="assets/digitals/IMG_2732.jpg" alt="Detalle 2" />
+          <p>Marlena. La Riviera. 20. febrero. 2025. Madrid</p>
+        </div>
+        <div class="foto-descriptiva">
+          <img src="assets/digitals/IMG_3500.jpg" alt="Detalle 3" />
+          <p>Javi Chapela. Café Comercial. 2. abril. 2025. Madrid</p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const carruseles = {
+        malmo: {
+          element: document.getElementById("carrusel-malmo"),
+          index: 0,
+        },
+        villa: {
+          element: document.getElementById("carrusel-villa"),
+          index: 0,
+        },
+      };
+
+      function moverCarrusel(nombre, direccion) {
+        const carrusel = carruseles[nombre];
+        const total = carrusel.element.children.length;
+
+        carrusel.index += direccion;
+        if (carrusel.index < 0) carrusel.index = total - 1;
+        if (carrusel.index >= total) carrusel.index = 0;
+
+        const ancho = carrusel.element.clientWidth;
+        carrusel.element.style.transform = `translateX(-${
+          carrusel.index * ancho
+        }px)`;
+      }
+
+      window.addEventListener("resize", () => {
+        moverCarrusel("malmo", 0);
+        moverCarrusel("villa", 0);
+      });
+    </script>
+  </body>
+</html>

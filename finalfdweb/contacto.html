@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Contacto - Portfolio de Lucía</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <header>
+      <h1>El maravilloso Portfolio de Lulu</h1>
+      <img
+        src="./assets/imagen de cabecera.png"
+        alt="Imagen de cabecera"
+        class="imagen-header"
+      />
+
+      <nav>
+        <ul class="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="trabajos.html">Mis trabajos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="titulo-contacto">Contacto</h2>
+      <section>
+        <div class="instagram-link">
+          <a
+            href="https://www.instagram.com/lulus_graphicdesigns"
+            target="_blank"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              alt="Instagram"
+              class="icono-instagram"
+            />
+            @lulus_graphicdesigns
+          </a>
+        </div>
+
+        <div style="margin-top: 40px; text-align: center">
+          <p>Puedes escribirme a:</p>
+          <p>
+            <a
+              href="mailto:4350lucia@gmail.com"
+              style="color: var(--color-acento); font-weight: bold"
+              >4350lucia@gmail.com</a
+            >
+          </p>
+          <p>O déjame un mensaje directamente:</p>
+
+          <div
+            style="
+              margin-top: 40px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+            "
+          >
+            <form style="margin-top: 20px; width: 100%; max-width: 500px">
+              <label for="nombre">Nombre:</label><br />
+              <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                required
+              /><br /><br />
+
+              <label for="email">Correo electrónico:</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+              /><br /><br />
+
+              <label for="mensaje">Mensaje:</label><br />
+              <textarea id="mensaje" name="mensaje" rows="5" required></textarea
+              ><br /><br />
+
+              <!-- BOTÓN ENVIAR CENTRADO -->
+              <div style="text-align: center">
+                <button type="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOTÓN BACK TO TOP CENTRADO -->
+      <div style="margin-top: 30px; text-align: center">
+        <p
+          class="back-to-top"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+        >
+          ↑ Back to Top
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Lulu os quiere un montón</p>
+    </footer>
+  </body>
+</html>

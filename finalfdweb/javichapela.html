@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>javi Chapela</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .contenido {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .flecha-retroceso {
+        display: inline-block;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: #ff6b00;
+      }
+
+      .titulo-seccion {
+        margin-bottom: 0;
+      }
+
+      .subtitulo {
+        font-size: 1rem;
+        color: #888;
+        margin-top: 0.3rem;
+      }
+
+      .descripcion {
+        margin: 1.5rem 0;
+        line-height: 1.6;
+      }
+
+      .carrusel-container {
+        position: relative;
+        width: 50%;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      .carrusel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carrusel-slide img {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        object-fit: contain;
+      }
+
+      .carrusel-boton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      .carrusel-boton.izquierda {
+        left: 0;
+      }
+
+      .carrusel-boton.derecha {
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>El maravilloso Portfolio de Lulu</h1>
+      <img
+        src="./assets/imagen de cabecera.png"
+        alt="Imagen de cabecera"
+        class="imagen-header"
+        width="50px"
+      />
+
+      <nav>
+        <ul class="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="trabajos.html">Mis trabajos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="contenido">
+      <a href="fotografia.html" class="flecha-retroceso">← </a>
+
+      <h1 class="titulo-seccion">Javi Chapela</h1>
+      <p class="subtitulo">5. abril. 2025 · Studi PKO. Madrid</p>
+
+      <p class="descripcion">
+        Para la grabación del próximo disco que el cantante Javi Chapela va a
+        sacar el próximo año, 2026, tuve la suerte de pasarme por el studio a
+        sacr un par de fotos para el proceso de este proyecto. Aquí estabamos en
+        el Studio PKO en Boadilla del Monte, Madrid grabando coros, voces de
+        javi, bajos, guitarras eléctricas y guitarras acusticas para su próximo
+        lanzamiento el 9 de mayo de 2025 llamado "comerte la boca".
+      </p>
+
+      <div class="carrusel-container">
+        <button class="carrusel-boton izquierda" onclick="moverCarrusel(-1)">
+          ←
+        </button>
+        <div class="carrusel-slide" id="carrusel">
+          <img src="assets/javichap/IMG_4654.jpg" alt="Línea Doce - Foto 1" />
+          <img src="assets/javichap/IMG_4767.jpg" alt="Línea Doce - Foto 2" />
+          <img src="assets/javichap/IMG_4808.jpg" alt="Línea Doce - Foto 3" />
+          <img src="assets/javichap/IMG_4838.jpg" alt="Línea Doce - Foto 4" />
+          <img src="assets/javichap/IMG_4843.jpg" alt="Línea Doce - Foto 5" />
+          <img src="assets/javichap/IMG_4881.jpg" alt="Línea Doce - Foto 6" />
+          <img src="assets/javichap/IMG_4914.jpg" alt="Línea Doce - Foto 7" />
+          <img src="assets/javichap/IMG_5066.jpg" alt="Línea Doce - Foto 8" />
+          <img src="assets/javichap/IMG_5098.jpg" alt="Línea Doce - Foto 9" />
+        </div>
+        <button class="carrusel-boton derecha" onclick="moverCarrusel(1)">
+          →
+        </button>
+      </div>
+    </main>
+
+    <script>
+      const carrusel = document.getElementById("carrusel");
+      let indice = 0;
+
+      function moverCarrusel(direccion) {
+        const total = carrusel.children.length;
+        indice += direccion;
+
+        if (indice < 0) indice = total - 1;
+        if (indice >= total) indice = 0;
+
+        const ancho = carrusel.clientWidth;
+        carrusel.style.transform = `translateX(-${indice * ancho}px)`;
+      }
+
+      window.addEventListener("resize", () => {
+        // Redimensiona el slide cuando cambie el tamaño de ventana
+        moverCarrusel(0);
+      });
+    </script>
+  </body>
+</html>

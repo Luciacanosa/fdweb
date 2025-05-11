@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inicio - Portfolio de Lucía</title>
+    <link rel="stylesheet" href="main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>El maravilloso Portfolio de Lulu</h1>
+      <img
+        src="./assets/imagen de cabecera.png"
+        alt="Imagen de cabecera"
+        class="imagen-header"
+        width="50px"
+      />
+
+      <nav>
+        <ul class="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="trabajos.html">Mis trabajos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="titulo-contacto">Heyy I'm a Graphic Designer!</h2>
+      <img
+        src="./assets/tarjetita cara uno.png"
+        alt="Imagen de cabecera"
+        class="imagen-center"
+        width="250px"
+      />
+      <div class="carrusel-texto">
+        <div class="carrusel-contenido">
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+          <span
+            >Heyy! I'm a Graphic Designer! ✦ @lulus_graphicdesigns
+            &nbsp;&nbsp;</span
+          >
+        </div>
+      </div>
+
+      <section class="bloque-texto">
+        <h2 class="titulo-naranja">Bienvenid@s a mi portfolio!</h2>
+
+        <p>
+          Este sitio fue diseñado y construido desde cero utilizando Visual
+          Studio Code. Aquí vas a encontrar una selección de mis proyectos más
+          importantes dentro del diseño gráfico, incluyendo identidades
+          visuales, redes sociales, fotografía y más. ¡Gracias por visitarlo,
+          seguro que te lo pasa muy bien!
+        </p>
+        <img
+          src="./assets/welcome to my girlblog meme.jpeg"
+          alt="Imagen de cabecera"
+          class="imagen-center"
+          width="250px"
+          justify-content="center"
+        />
+      </section>
+
+      <section class="bloque-texto">
+        <h2><a href="sobre-mi.html" class="link-seccion">Sobre mí</a></h2>
+        <p>
+          Soy Lucía, o como muchos me llama, Lulu, estudiante de diseño gráfico
+          apasionada por crear identidades visuales y contenido para redes
+          además de ser una manate de la fotografía. Me encanta combinar
+          creatividad con funcionalidad para contar historias visuales con
+          personalidad y siempre con un toque gracioso y muy lulu.
+        </p>
+        <p class="back-to-top" onclick="window.location.href='sobre-mi.html'">
+          → Conoce más sobre mí aquí!
+        </p>
+        <p2 class="p2">Anda dale que te veo muy cotilla</p2>
+      </section>
+
+      <section class="bloque-texto">
+        <h2><a href="trabajos.html" class="link-seccion">Trabajos</a></h2>
+        <div class="galeria-trabajos">
+          <div class="trabajo">
+            <style>
+              .imagen-hover {
+                width: 300px; /* o el tamaño que quieras */
+              }
+
+              .imagen-hover-container {
+                position: relative;
+                display: inline-block;
+              }
+
+              .imagen-hover-container img {
+                display: block;
+                transition: opacity 0.3s ease;
+              }
+
+              .imagen-hover-container img.hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+              }
+
+              .imagen-hover-container:hover img.hover {
+                opacity: 1;
+              }
+
+              .imagen-hover-container:hover img.normal {
+                opacity: 0;
+              }
+            </style>
+
+            <a href="fotografia.html">
+              <div class="imagen-hover-container">
+                <img
+                  src="assets/alex pko.jpg"
+                  alt="Imagen normal"
+                  class="imagen-hover normal"
+                />
+                <img
+                  src="assets/alex pko hover.jpg"
+                  alt="Imagen al pasar el ratón"
+                  class="imagen-hover hover"
+                />
+              </div>
+            </a>
+            <p>
+              Varias de las fotos que más me gustan, sobretodo de conciertos
+            </p>
+          </div>
+          <div class="trabajo">
+            <style>
+              .imagen-hover-container {
+                position: relative;
+                display: inline-block;
+              }
+
+              .imagen-hover-container img {
+                display: block;
+                width: 100%; /* o pon un ancho fijo si prefieres */
+                transition: opacity 0.3s ease;
+              }
+
+              .imagen-hover-container img.hover {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+              }
+
+              .imagen-hover-container:hover img.hover {
+                opacity: 1;
+              }
+
+              .imagen-hover-container:hover img.normal {
+                opacity: 0;
+              }
+            </style>
+
+            <a href="diseno.html">
+              <div class="imagen-hover-container">
+                <img
+                  src="assets/mock up malmo 20258 casa estar.png"
+                  alt="Trabajo de Diseño"
+                  class="normal"
+                />
+                <img
+                  src="assets/INAZIO MOCK UP 5.png"
+                  alt="Diseño al pasar el ratón"
+                  class="hover"
+                />
+              </div>
+            </a>
+
+            <p>Algunos diseños que he ido creando :)</p>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px">
+          <a href="trabajos.html"><button>Ver todos los trabajos</button></a>
+        </div>
+        <img
+          src="./assets/un poquito de aquello.jpeg"
+          alt="Imagen de cabecera"
+          class="imagen-center"
+          width="250px"
+        />
+      </section>
+
+      <section class="bloque-texto" style="text-align: center">
+        <h2 class="titulo-naranja">
+          ¿Quieress contactarme o simplemente saludarme?
+        </h2>
+
+        <a href="contacto.html">
+          <button>Ir a Contacto</button>
+        </a>
+
+        <img
+          src="./assets/espero su repuesta.jpeg"
+          alt="Imagen de cabecera"
+          class="imagen-center"
+          width="250px"
+        />
+      </section>
+
+      <div style="margin-top: 40px; text-align: center">
+        <p
+          class="back-to-top"
+          onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+        >
+          ↑ Back to Top
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Lulu os quiere un montón</p>
+    </footer>
+  </body>
+</html>

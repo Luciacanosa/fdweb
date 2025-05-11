@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error 404 - Página no encontrada</title>
+
+    <style>
+      body {
+        background-color: #f8f8f8;
+        font-family: sans-serif;
+        text-align: center;
+        padding: 50px;
+      }
+
+      .circulo {
+        display: inline-block;
+        animation: moverEnCirculo 4s linear infinite;
+      }
+
+      .vibrar {
+        font-size: 8em;
+        color: #ff6f61;
+        animation: vibrar 0.2s infinite;
+      }
+
+      @keyframes moverEnCirculo {
+        0% {
+          transform: translate(0, 0);
+        }
+        25% {
+          transform: translate(10px, -10px);
+        }
+        50% {
+          transform: translate(0, -20px);
+        }
+        75% {
+          transform: translate(-10px, -10px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      @keyframes vibrar {
+        0% {
+          transform: translate(1px, 0);
+        }
+        25% {
+          transform: translate(-1px, 1px);
+        }
+        50% {
+          transform: translate(1px, -1px);
+        }
+        75% {
+          transform: translate(-1px, 1px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      p {
+        font-size: 1.1em;
+        color: #333;
+      }
+
+      a {
+        display: block;
+        margin-top: 20px;
+        color: #007acc;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circulo">
+      <h1 class="vibrar">404</h1>
+    </div>
+    <p>¡Uy! La página que buscas no existe.</p>
+    <img
+      src="./assets/error-404-not.jpg"
+      alt="Descripción de la imagen"
+      width="250"
+    />
+
+    <a href="index.html">Volver al inicio</a>
+  </body>
+</html>

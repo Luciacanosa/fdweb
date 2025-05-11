@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Álvaro Hellin</title>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      .contenido {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+      }
+
+      .flecha-retroceso {
+        display: inline-block;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: #ff6b00;
+      }
+
+      .titulo-seccion {
+        margin-bottom: 0;
+      }
+
+      .subtitulo {
+        font-size: 1rem;
+        color: #888;
+        margin-top: 0.3rem;
+      }
+
+      .descripcion {
+        margin: 1.5rem 0;
+        line-height: 1.6;
+      }
+
+      .carrusel-container {
+        position: relative;
+        width: 50%;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      .carrusel-slide {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .carrusel-slide img {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        object-fit: contain;
+      }
+
+      .carrusel-boton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        z-index: 1;
+      }
+
+      .carrusel-boton.izquierda {
+        left: 0;
+      }
+
+      .carrusel-boton.derecha {
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>El maravilloso Portfolio de Lulu</h1>
+      <img
+        src="./assets/imagen de cabecera.png"
+        alt="Imagen de cabecera"
+        class="imagen-header"
+        width="50px"
+      />
+
+      <nav>
+        <ul class="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="trabajos.html">Mis trabajos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="contenido">
+      <a href="fotografia.html" class="flecha-retroceso">← </a>
+
+      <h1 class="titulo-seccion">Álvaro Hellin</h1>
+      <p class="subtitulo">22. marzo. 2025 · Sala La Que se Lía, Madrid</p>
+
+      <p class="descripcion">
+        Esta serie fotográfica recoge momentos del concierto en vivo de Álvaro
+        Hellin en la Sala La que Se Lía. Este fue el primer concierto que daba
+        Álvaro, ¡y que concierto! nos lo pasamos super bien y salieron algunas
+        fotos bastante chulas auqneu hay que decir que fue un poco más
+        complicado de lo que pensaba ya que la luz de la sala no era la mejor.
+      </p>
+
+      <div class="carrusel-container">
+        <button class="carrusel-boton izquierda" onclick="moverCarrusel(-1)">
+          ←
+        </button>
+        <div class="carrusel-slide" id="carrusel">
+          <img
+            src="assets/alvarohellin/IMG_2206.jpg"
+            alt="Línea Doce - Foto 1"
+          />
+          <img
+            src="assets/alvarohellin/IMG_2278.jpg"
+            alt="Línea Doce - Foto 2"
+          />
+          <img
+            src="assets/alvarohellin/IMG_2802.jpg"
+            alt="Línea Doce - Foto 3"
+          />
+        </div>
+        <button class="carrusel-boton derecha" onclick="moverCarrusel(1)">
+          →
+        </button>
+      </div>
+    </main>
+
+    <script>
+      const carrusel = document.getElementById("carrusel");
+      let indice = 0;
+
+      function moverCarrusel(direccion) {
+        const total = carrusel.children.length;
+        indice += direccion;
+
+        if (indice < 0) indice = total - 1;
+        if (indice >= total) indice = 0;
+
+        const ancho = carrusel.clientWidth;
+        carrusel.style.transform = `translateX(-${indice * ancho}px)`;
+      }
+
+      window.addEventListener("resize", () => {
+        // Redimensiona el slide cuando cambie el tamaño de ventana
+        moverCarrusel(0);
+      });
+    </script>
+  </body>
+</html>
