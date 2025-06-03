@@ -680,3 +680,57 @@ img {
 .boton-error:hover {
   background-color: darkorange;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 10px;
+  }
+
+  .contenido-principal {
+    padding: 80px 20px 40px;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta-trabajo,
+  .trabajo {
+    width: 100%;
+  }
+
+  .bloque-texto {
+    padding: 40px 20px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .titulo-seccion {
+    font-size: 2rem;
+  }
+
+  .form,
+  form {
+    width: 100%;
+  }
+
+  .menu-principal {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .tarjeta-foto {
+    width: 100%;
+  }
+
+  .carrusel-img {
+    max-width: 100%;
+  }
+}
