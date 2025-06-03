@@ -108,6 +108,24 @@
     </style>
   </head>
   <body>
+    <header>
+      <h1>El maravilloso Portfolio de Lulu</h1>
+      <img
+        src="./assets/imagen de cabecera.png"
+        alt="Imagen de cabecera"
+        class="imagen-header"
+      />
+
+      <nav>
+        <ul class="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="trabajos.html">Mis trabajos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+
     <main class="contenido">
       <a href="fotografia.html" class="flecha-retroceso">← </a>
 
@@ -120,34 +138,66 @@
         la utilizo siempre que puedo. Aquí os dejo un recap de las fotos que más
         me han gustado de los últimos meses.
       </p>
+      <h2>Digitales un poco más rándom</h2>
+      <div class="galeria-descriptiva">
+        <div class="foto-descriptiva">
+          <img src="assets/javypablo.jpg" alt="Detalle 3" />
+          <p>
+            Javypablo con StWoods. Sala Villano. 12. diciembre. 2024. Madrid
+          </p>
+        </div>
+        <div class="foto-descriptiva">
+          <img src="assets/besmaya.jpg" alt="Detalle 3" />
+          <p>Besmaya. Inverfest. 25. enero. 2025. Madrid</p>
+        </div>
+        <div class="foto-descriptiva">
+          <img src="assets/digitals/IMG_2647.jpg" alt="Detalle 1" />
+          <p>
+            Javi Chapela. Telonero de Marlena. La Riviera. 20. febrero. 2025.
+            Madrid
+          </p>
+        </div>
+        <div class="foto-descriptiva">
+          <img src="assets/digitals/IMG_2732.jpg" alt="Detalle 2" />
+          <p>Marlena. La Riviera. 20. febrero. 2025. Madrid</p>
+        </div>
+        <div class="foto-descriptiva">
+          <img src="assets/digitals/IMG_3500.jpg" alt="Detalle 3" />
+          <p>Javi Chapela. Café Comercial. 2. abril. 2025. Madrid</p>
+        </div>
+        <div class="foto-descriptiva">
+          <img src="assets/victorbilbo.jpg" alt="Detalle 3" />
+          <p>malmö 040 (Victor). Kafe Antokia. 31. mayo. 2025. Bilbao</p>
+        </div>
+      </div>
 
       <!-- Carrusel Malmö 040 -->
       <h2>Malmö 040</h2>
-      <p class="subtitulo">10/11/12. abril. 2025. Sala La Riviera. Madrid</p>
+      <p class="subtitulo">10. mayo. 2025. Sala Impala. Córdoba.</p>
       <div class="carrusel-container">
         <button
           class="carrusel-boton izquierda"
-          onclick="moverCarrusel('malmo', -1)"
+          onclick="moverCarrusel('malmoc', -1)"
         >
           ←
         </button>
-        <div class="carrusel-slide" id="carrusel-malmo">
-          <img src="assets/malmo/IMG_4048.jpg" alt="Malmö - Foto 1" />
-          <img src="assets/malmo/IMG_4033.jpg" alt="Malmö - Foto 2" />
-          <img src="assets/malmo/IMG_3611.jpg" alt="Malmö - Foto 3" />
-          <img src="assets/malmo/IMG_4139.jpg" alt="Malmö - Foto 4" />
-          <img src="assets/malmo/IMG_4185.jpg" alt="Malmö - Foto 5" />
-          <img src="assets/malmo/IMG_4331.jpg" alt="Malmö - Foto 6" />
-          <img src="assets/malmo/IMG_4238.jpg" alt="Malmö - Foto 7" />
-          <img src="assets/malmo/IMG_4220.jpg" alt="Malmö - Foto 8" />
-          <img src="assets/malmo/IMG_4198.jpg" alt="Malmö - Foto 9" />
-          <img src="assets/malmo/IMG_4249.jpg" alt="Malmö - Foto 10" />
-          <img src="assets/malmo/IMG_4294.jpg" alt="Malmö - Foto 11" />
-          <img src="assets/malmo/IMG_4192.jpg" alt="Malmö - Foto 12" />
+        <div class="carrusel-slide" id="carrusel-malmoc">
+          <img src="assets/cordobamalmo/IMG_4782.JPG" alt="Malmö - Foto 1" />
+          <img src="assets/cordobamalmo/IMG_4762.JPG" alt="Malmö - Foto 2" />
+          <img src="assets/cordobamalmo/IMG_4842.JPG" alt="Malmö - Foto 3" />
+          <img src="assets/cordobamalmo/IMG_4846.JPG" alt="Malmö - Foto 4" />
+          <img src="assets/cordobamalmo/IMG_4858.JPG" alt="Malmö - Foto 5" />
+          <img src="assets/cordobamalmo/IMG_4864.JPG" alt="Malmö - Foto 6" />
+          <img src="assets/cordobamalmo/IMG_4873.JPG" alt="Malmö - Foto 7" />
+          <img src="assets/cordobamalmo/IMG_4884.JPG" alt="Malmö - Foto 8" />
+          <img src="assets/cordobamalmo/IMG_4892.JPG" alt="Malmö - Foto 9" />
+          <img src="assets/cordobamalmo/IMG_4933.JPG" alt="Malmö - Foto 10" />
+          <img src="assets/cordobamalmo/IMG_4937.JPG" alt="Malmö - Foto 11" />
+          <img src="assets/cordobamalmo/IMG_5040.JPG" alt="Malmö - Foto 12" />
         </div>
         <button
           class="carrusel-boton derecha"
-          onclick="moverCarrusel('malmo', 1)"
+          onclick="moverCarrusel('malmoc', 1)"
         >
           →
         </button>
@@ -201,24 +251,36 @@
         </button>
       </div>
 
-      <!-- Galería con subtítulos -->
-      <h2>Digitales un poco más rándom</h2>
-      <div class="galeria-descriptiva">
-        <div class="foto-descriptiva">
-          <img src="assets/digitals/IMG_2647.jpg" alt="Detalle 1" />
-          <p>
-            Javi Chapela. Telonero de Marlena. La Riviera. 20. febrero. 2025.
-            Madrid
-          </p>
+      <!-- Carrusel Malmö 040 -->
+      <h2>Malmö 040</h2>
+      <p class="subtitulo">10/11/12. abril. 2025. Sala La Riviera. Madrid</p>
+      <div class="carrusel-container">
+        <button
+          class="carrusel-boton izquierda"
+          onclick="moverCarrusel('malmo', -1)"
+        >
+          ←
+        </button>
+        <div class="carrusel-slide" id="carrusel-malmo">
+          <img src="assets/malmo/IMG_4048.jpg" alt="Malmö - Foto 1" />
+          <img src="assets/malmo/IMG_4033.jpg" alt="Malmö - Foto 2" />
+          <img src="assets/malmo/IMG_3611.jpg" alt="Malmö - Foto 3" />
+          <img src="assets/malmo/IMG_4139.jpg" alt="Malmö - Foto 4" />
+          <img src="assets/malmo/IMG_4185.jpg" alt="Malmö - Foto 5" />
+          <img src="assets/malmo/IMG_4331.jpg" alt="Malmö - Foto 6" />
+          <img src="assets/malmo/IMG_4238.jpg" alt="Malmö - Foto 7" />
+          <img src="assets/malmo/IMG_4220.jpg" alt="Malmö - Foto 8" />
+          <img src="assets/malmo/IMG_4198.jpg" alt="Malmö - Foto 9" />
+          <img src="assets/malmo/IMG_4249.jpg" alt="Malmö - Foto 10" />
+          <img src="assets/malmo/IMG_4294.jpg" alt="Malmö - Foto 11" />
+          <img src="assets/malmo/IMG_4192.jpg" alt="Malmö - Foto 12" />
         </div>
-        <div class="foto-descriptiva">
-          <img src="assets/digitals/IMG_2732.jpg" alt="Detalle 2" />
-          <p>Marlena. La Riviera. 20. febrero. 2025. Madrid</p>
-        </div>
-        <div class="foto-descriptiva">
-          <img src="assets/digitals/IMG_3500.jpg" alt="Detalle 3" />
-          <p>Javi Chapela. Café Comercial. 2. abril. 2025. Madrid</p>
-        </div>
+        <button
+          class="carrusel-boton derecha"
+          onclick="moverCarrusel('malmo', 1)"
+        >
+          →
+        </button>
       </div>
     </main>
 
@@ -230,6 +292,10 @@
         },
         villa: {
           element: document.getElementById("carrusel-villa"),
+          index: 0,
+        },
+        malmoc: {
+          element: document.getElementById("carrusel-malmoc"),
           index: 0,
         },
       };
@@ -253,5 +319,8 @@
         moverCarrusel("villa", 0);
       });
     </script>
+    <footer>
+      <p>© 2025 Lulu os quiere un montón</p>
+    </footer>
   </body>
 </html>
